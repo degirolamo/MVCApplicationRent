@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCApplicationRent", "MVCApplicationRent\MVCApplicationRent.csproj", "{89B55226-EA96-41C0-8FA0-06DB406A5D20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{90F882B0-9F55-4502-B459-15F23F3B4C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{306934C9-D473-4E79-A4C8-2BC5F4A2F192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89B55226-EA96-41C0-8FA0-06DB406A5D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B55226-EA96-41C0-8FA0-06DB406A5D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B55226-EA96-41C0-8FA0-06DB406A5D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B55226-EA96-41C0-8FA0-06DB406A5D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F882B0-9F55-4502-B459-15F23F3B4C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F882B0-9F55-4502-B459-15F23F3B4C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F882B0-9F55-4502-B459-15F23F3B4C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F882B0-9F55-4502-B459-15F23F3B4C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306934C9-D473-4E79-A4C8-2BC5F4A2F192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306934C9-D473-4E79-A4C8-2BC5F4A2F192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306934C9-D473-4E79-A4C8-2BC5F4A2F192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306934C9-D473-4E79-A4C8-2BC5F4A2F192}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
