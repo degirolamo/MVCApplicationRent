@@ -11,15 +11,57 @@ namespace MVCApplicationRent.Controllers
     public class ClientController : Controller
 
     {  // GET: Clients
-        ClientRESTService ser = new ClientRESTService();
         public ActionResult Index()
         {
-            Country country1 = new Country { Id = 4, Name = "Portugal" };
+            ClientRESTService c = new ClientRESTService();
+            List <Client> listClient = c.getClients();
 
-            Client p = new Client { Id = 5, Firstname = "Rafael", Lastname = "Peixoto", Address = "Rue des Hipsters, 6969 Crans", Country = country1, Phone = "078 377 64 27", Mail="Raf.Peixot@gmail.com"};
-            ser.PostClient(p);
+            return View(listClient);
+        }
+        public ActionResult EditClient(int id)
+        {
+            ClientRESTService c = new ClientRESTService();
+            Client client = c.getClient(id);
+            return View(client);
+        }
+        [HttpPost]
+        public ActionResult EditClient(int id, Client client)
+        {
+            ClientRESTService c = new ClientRESTService();
+            c.PutClient(client);
+            return RedirectToAction("DetailsClient", new { id = id });
+        }
+        
+        public ActionResult DetailsClient(int id)
+        {
+            ClientRESTService c = new ClientRESTService();
+            Client client = c.getClient(id);
+            return View(client);
+        }
+        public ActionResult DeleteClient(int id)
+        {
+            ClientRESTService c = new ClientRESTService();
+            Client client = c.getClient(id);
+            return View(client);
+        }
+        [HttpPost]
+        public ActionResult DeleteClient(int id, string __RequestVerificationToken)
+        {
+            ClientRESTService c = new ClientRESTService();
+            c.DeleteClient(id);
+            return RedirectToAction("Index");
+        }
 
-            return View(ser.getClients());
+        public ActionResult AddClient()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddClient(Client client)
+        {
+            ClientRESTService c = new ClientRESTService();
+            c.PostClient(client);
+            return RedirectToAction("Index");
         }
     }
 }

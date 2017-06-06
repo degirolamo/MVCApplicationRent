@@ -152,9 +152,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\MaterialController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\RentAndClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -192,10 +195,24 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Material\Index.cshtml" />
+    <Content Include="Views\Rent\Index.cshtml" />
+    <Content Include="Views\Client\EditClient.cshtml" />
+    <Content Include="Views\Client\DeleteClient.cshtml" />
+    <Content Include="Views\Client\DetailsClient.cshtml" />
+    <Content Include="Views\Client\AddClient.cshtml" />
+    <Content Include="Views\Material\EditMaterial.cshtml" />
+    <Content Include="Views\Material\DetailsMaterial.cshtml" />
+    <Content Include="Views\Material\DeleteMaterial.cshtml" />
+    <Content Include="Views\Material\AddMaterial.cshtml" />
+    <Content Include="Views\Rent\DeleteRent.cshtml" />
+    <Content Include="Views\Rent\DetailsRent.cshtml" />
+    <Content Include="Views\Rent\EditRent.cshtml" />
+    <Content Include="Views\Rent\AddRent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

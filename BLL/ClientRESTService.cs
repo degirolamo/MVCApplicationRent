@@ -9,7 +9,7 @@ namespace BLL
 {
     public class ClientRESTService
     {
-        readonly string baseUri = "http://localhost:5158/api/Clients/";
+        readonly string baseUri = "http://localhost:51063/api/Clients/";
 
         public List<Client> getClients()
         {
@@ -21,6 +21,17 @@ namespace BLL
 
             }
 
+        }
+
+        public Client getClient(int id)
+        {
+            string uri = baseUri + id;
+            using (HttpClient httpClient = new HttpClient())
+            {
+                Task<string> response = httpClient.GetStringAsync(uri);
+                return JsonConvert.DeserializeObject<Client>(response.Result);
+
+            }
         }
 
         public bool PostClient (Client c)
@@ -37,7 +48,7 @@ namespace BLL
 
         public bool PutClient(Client c)
         {
-            string uri = baseUri;
+            string uri = baseUri +c.Id ;
             using (HttpClient httpClient = new HttpClient())
             {
                 string pro = JsonConvert.SerializeObject(c);

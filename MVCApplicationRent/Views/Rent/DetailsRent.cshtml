@@ -1,0 +1,46 @@
+﻿@model DTO.Rent
+
+@{
+    ViewBag.Title = "DetailsRent";
+}
+
+<h2>Details of a rent</h2>
+
+<div>
+    <h4>Rent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Firstname) @Html.DisplayNameFor(model => model.Client.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Firstname) @Html.DisplayFor(model => model.Client.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Material.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BeginDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeginDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditRent", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

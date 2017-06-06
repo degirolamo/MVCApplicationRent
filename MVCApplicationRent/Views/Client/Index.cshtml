@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DTO.Client>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Client</h2>
+
+<p>
+    @Html.ActionLink("Create a new client", "AddClient")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditClient", new { id=item.Id }) |
+            @Html.ActionLink("Details", "DetailsClient", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteClient", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

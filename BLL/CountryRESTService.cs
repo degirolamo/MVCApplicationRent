@@ -11,7 +11,7 @@ namespace BLL
 {
    public class CountryRESTService
     {
-        readonly string baseUri = "http://localhost:5158/api/Countrys/";
+        readonly string baseUri = "http://localhost:51063/api/Countrys/";
 
         public List<Country> getCountries()
         {

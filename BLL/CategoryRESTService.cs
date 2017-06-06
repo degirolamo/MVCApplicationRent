@@ -11,7 +11,7 @@ namespace BLL
 {
    public class CategoryRESTService
     {
-        readonly string baseUri = "http://localhost:5158/api/Categorys/";
+        readonly string baseUri = "http://localhost:51063/api/Categorys/";
 
         public List<Category> getCategories()
         {

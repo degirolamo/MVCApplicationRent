@@ -11,21 +11,32 @@ namespace BLL
 {
   public class MaterialRESTService
     {
-        readonly string baseUri = "http://localhost:5158/api/Materials/";
+        readonly string baseUri = "http://localhost:51063/api/Materials/";
 
-        public List<MaterialRESTService> getMaterials()
+        public List<Material> getMaterials()
         {
             string uri = baseUri;
             using (HttpClient httpClient = new HttpClient())
             {
                 Task<string> response = httpClient.GetStringAsync(uri);
-                return JsonConvert.DeserializeObject<List<MaterialRESTService>>(response.Result);
+                return JsonConvert.DeserializeObject<List<Material>>(response.Result);
 
             }
 
         }
 
-        public bool PostMaterial(MaterialRESTService m)
+        public Material getMaterial(int id)
+        {
+            string uri = baseUri + id;
+            using (HttpClient httpClient = new HttpClient())
+            {
+                Task<string> response = httpClient.GetStringAsync(uri);
+                return JsonConvert.DeserializeObject<Material>(response.Result);
+
+            }
+        }
+
+        public bool PostMaterial(Material m)
         {
             string uri = baseUri;
             using (HttpClient httpClient = new HttpClient())
@@ -37,9 +48,9 @@ namespace BLL
             }
         }
 
-        public bool PutMaterial(MaterialRESTService m)
+        public bool PutMaterial(Material m)
         {
-            string uri = baseUri;
+            string uri = baseUri + m.Id;
             using (HttpClient httpClient = new HttpClient())
             {
                 string pro = JsonConvert.SerializeObject(m);

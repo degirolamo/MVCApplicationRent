@@ -11,7 +11,7 @@ namespace BLL
 {
     public class RentRESTService
     {
-        readonly string baseUri = "http://localhost:5158/api/Rents/";
+        readonly string baseUri = "http://localhost:51063/api/Rents/";
 
         public List<Rent> getRents()
         {
@@ -23,6 +23,16 @@ namespace BLL
 
             }
 
+        }
+        public Rent getRent(int id)
+        {
+            string uri = baseUri + id;
+            using (HttpClient httpClient = new HttpClient())
+            {
+                Task<string> response = httpClient.GetStringAsync(uri);
+                return JsonConvert.DeserializeObject<Rent>(response.Result);
+
+            }
         }
 
         public bool PostRent(Rent r)
