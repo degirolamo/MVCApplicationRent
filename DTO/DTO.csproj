@@ -44,9 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
     <Compile Include="Client.cs" />
-    <Compile Include="Country.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="Rent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

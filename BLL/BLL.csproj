@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryRESTService.cs" />
     <Compile Include="ClientRESTService.cs" />
-    <Compile Include="CountryRESTService.cs" />
     <Compile Include="MaterialRESTService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentRESTService.cs" />
